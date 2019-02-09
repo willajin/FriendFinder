@@ -8,7 +8,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // express middleware to access public files
-app.use(express.static(path.join(__dirname, "./app/public")));
+app.use(express.static("./app/public"));
 
 // express middleware to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true}));
