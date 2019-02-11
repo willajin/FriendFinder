@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder | Survey</title>
+
+    <!-- Link jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Link Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Link Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey</h1>
+
+        <h5>About You</h5>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text">
+                        <label for="name" class="active">Name (Required)</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="photo-link" type="text">
+                        <label for="photo-link" class="active">Link to Photo Image (Required)</label>
+                    </div>
+                </div>
+
+                <!-- Survey -->
+                <h5 style="font-weight:bold">Answer the below questions truthfully.</h5>
+                <div class="input-field col s12">
+                    <h5>Question 1</h5>
+                    <h7>question 1</h7>
+                    <select id="q1">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 2</h5>
+                    <h7>question 1</h7>
+                    <select id="q2">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 3</h5>
+                    <h7>question 1</h7>
+                    <select id="q3">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 4</h5>
+                    <h7>question 1</h7>
+                    <select id="q4">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 5</h5>
+                    <h7>question 1</h7>
+                    <select id="q5">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 6</h5>
+                    <h7>question 1</h7>
+                    <select id="q6">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 7</h5>
+                    <h7>question 1</h7>
+                    <select id="q7">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 8</h5>
+                    <h7>question 1</h7>
+                    <select id="q8">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 9</h5>
+                    <h7>question 1</h7>
+                    <select id="q9">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s12">
+                    <h5>Question 10</h5>
+                    <h7>question 1</h7>
+                    <select id="q10">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Somewhat Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Somewhat Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+
+                <button id="addButton" class="btn waves-effect waves-light grey" type="submit"
+                    name="action">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
