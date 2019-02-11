@@ -13,6 +13,7 @@ var api = function(app) {
     app.post("/api/friends", function(request, response) {
         // store JSON post from survey
         var newFriend = request.body;
+        var newScores = newFriend.scores;
 
         // use RegEx Pattern to remove spaces
         newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
@@ -21,7 +22,6 @@ var api = function(app) {
 
 
         // add to friends
-        console.log(newFriend);
         friends.push(newFriend);
         response.json(newFriend);
     });

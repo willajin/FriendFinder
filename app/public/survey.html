@@ -168,15 +168,44 @@
                     </select>
                 </div>
 
-                <button id="addButton" class="btn waves-effect waves-light grey" type="submit"
+                <button id="submitButton" class="btn waves-effect waves-light grey" type="submit"
                     name="action">Submit</button>
             </form>
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
             $('select').formSelect();
+        });
+
+        // submit form
+        $("#submitButton").on("click", function(event) {
+            event.preventDefault();
+            
+            // collect user inputs
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo-link").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim()
+                ]
+            };
+
+            // add user input to friends
+            $.post("/api/friends", newFriend)
+            .then(function(data) {
+                alert("Finding your friend...");
+            });
         });
     </script>
 </body>
