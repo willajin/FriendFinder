@@ -22,7 +22,7 @@
     <div class="container">
         <h1>Survey</h1>
 
-        <h5>About You</h5>
+        <h5 style="font-weight:bold">About You</h5>
         <div class="row">
             <form class="col s12">
                 <div class="row">
@@ -37,10 +37,9 @@
                 </div>
 
                 <!-- Survey -->
-                <h5 style="font-weight:bold">Answer the below questions truthfully.</h5>
+                <h6 style="font-weight:bold">Answer the below questions truthfully.</h6>
                 <div class="input-field col s12">
-                    <h5>Question 1</h5>
-                    <h7>question 1</h7>
+                    <h6>1. Your mind is always buzzing with unexplored ideas and plans.</h6>
                     <select id="q1">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -52,8 +51,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 2</h5>
-                    <h7>question 1</h7>
+                    <h6>2. Generally speaking, you rely more on your experience than your imagination.</h6>
                     <select id="q2">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -65,8 +63,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 3</h5>
-                    <h7>question 1</h7>
+                    <h6>3. You find it easy to stay relaxed and focused even when there is some pressure.</h6>
                     <select id="q3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -78,8 +75,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 4</h5>
-                    <h7>question 1</h7>
+                    <h6>4. You rarely do something just out of sheer curiosity.</h6>
                     <select id="q4">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -91,8 +87,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 5</h5>
-                    <h7>question 1</h7>
+                    <h6>5. People can rarely upset you.</h6>
                     <select id="q5">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -104,8 +99,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 6</h5>
-                    <h7>question 1</h7>
+                    <h6>It is often difficult for you to relate to other people’s feelings.</h6>
                     <select id="q6">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -117,8 +111,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 7</h5>
-                    <h7>question 1</h7>
+                    <h6>7. In a discussion, truth should be more important than people’s sensitivities.</h6>
                     <select id="q7">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -130,8 +123,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 8</h5>
-                    <h7>question 1</h7>
+                    <h6>8. You rarely get carried away by fantasies and ideas.</h6>
                     <select id="q8">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -143,8 +135,8 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 9</h5>
-                    <h7>question 1</h7>
+                    <h6>9. You think that everyone’s views should be respected regardless of whether they are supported
+                        by facts or not.</h6>
                     <select id="q9">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -156,8 +148,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <h5>Question 10</h5>
-                    <h7>question 1</h7>
+                    <h6>You feel more energetic after spending time with a group of people.</h6>
                     <select id="q10">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 - Strongly Disagree</option>
@@ -174,15 +165,24 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="page-footer white">
+        <div class="footer-copyright grey lighten-2">
+            <div class="container">
+                © 2019 Copyright
+            </div>
+        </div>
+    </footer>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('select').formSelect();
         });
 
         // submit form
-        $("#submitButton").on("click", function(event) {
+        $("#submitButton").on("click", function (event) {
             event.preventDefault();
-            
+
             // collect user inputs
             var newFriend = {
                 name: $("#name").val().trim(),
@@ -203,9 +203,23 @@
 
             // add user input to friends
             $.post("/api/friends", newFriend)
-            .then(function(data) {
-                alert("Finding your friend...");
-            });
+                .then(function (data) {
+                    alert("Finding your friend...");
+                });
+
+            // clear inputs
+            $("#name").val("");
+            $("#photo-link").val("");
+            $("#q1").val().trim("");
+            $("#q2").val().trim("");
+            $("#q3").val().trim("");
+            $("#q4").val().trim("");
+            $("#q5").val().trim("");
+            $("#q6").val().trim("");
+            $("#q7").val().trim("");
+            $("#q8").val().trim("");
+            $("#q9").val().trim("");
+            $("#q10").val().trim("");
         });
     </script>
 </body>
