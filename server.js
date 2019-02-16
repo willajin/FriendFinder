@@ -16,11 +16,7 @@ app.use(bodyParser.json());
 
 // routes
 require("./app/routing/htmlRoutes")(app);
-// var html = require("./app/routing/htmlRoutes");
-// html(app);
 require("./app/routing/apiRoutes")(app);
-// var api = require("./app/routing/apiRoutes");
-// api(app);
 
 // server listen
 app.listen(PORT, function() {
