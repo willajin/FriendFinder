@@ -14,20 +14,23 @@ var api = function (app) {
         // store JSON post from survey
         var newFriend = request.body;
         var newScores = newFriend.scores;
+        console.log("User scores:");
         console.log(newScores);
 
         // best match
         var match = {};
         var matchIndex = 0;
-        var matchDifference = 40;   // greatest match difference between total scores
+        var matchDifference = 100;   // greatest match difference between total scores
 
-        // use RegEx Pattern to remove spaces
-        newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+        // convert input scores to integers
+        for (var i = 0; i < newScores.length; i++) {
+            newScores[i] = parseInt(newScores[i]);
+        }
 
-        // COMPATIBILITY LOGIC //
+        // compatibility logic //
         // total difference between new scores and other user scores
-        var totalDifference = 0;
         for (var i = 0; i < friends.length; i++) {
+            var totalDifference = 0;
             for (var j = 0; j < newScores.length; j++) {
                 totalDifference += Math.abs(friends[i].scores[j] - newScores[j]);
             }
@@ -41,6 +44,8 @@ var api = function (app) {
 
         // push best match
         match = friends[matchIndex];
+        console.log("Match:");
+        console.log(match);
 
         // add newFriend to friends array
         friends.push(newFriend);
