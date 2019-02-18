@@ -165,6 +165,19 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div id="matchModal" class="modal">
+        <div class="modal-content">
+            <h4>Your new friend is...</h4>
+            <p>A bunch of text</p>
+            <h2 id="matchName"></h2>
+            <img id="matchPhoto" src="" height="250" width="250">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="page-footer white">
         <div class="footer-copyright grey lighten-2">
@@ -201,25 +214,29 @@
                 ]
             };
 
-            // add user input to friends
+            // AJAX post to add user input to friends API
             $.post("/api/friends", newFriend)
                 .then(function (data) {
-                    alert("Finding your friend...");
-                });
+                    $("#matchName").text(data.name);
+                    $("#matchPhoto").attr("src", data.photo);
 
-            // clear inputs
-            $("#name").val("");
-            $("#photo-link").val("");
-            $("#q1").val().trim("");
-            $("#q2").val().trim("");
-            $("#q3").val().trim("");
-            $("#q4").val().trim("");
-            $("#q5").val().trim("");
-            $("#q6").val().trim("");
-            $("#q7").val().trim("");
-            $("#q8").val().trim("");
-            $("#q9").val().trim("");
-            $("#q10").val().trim("");
+                    // display modal
+                    $("#matchModal").modal("toggle");
+
+                    // clear inputs
+                    $("#name").val("");
+                    $("#photo-link").val("");
+                    $("#q1").val().trim("");
+                    $("#q2").val().trim("");
+                    $("#q3").val().trim("");
+                    $("#q4").val().trim("");
+                    $("#q5").val().trim("");
+                    $("#q6").val().trim("");
+                    $("#q7").val().trim("");
+                    $("#q8").val().trim("");
+                    $("#q9").val().trim("");
+                    $("#q10").val().trim("");
+                });
         });
     </script>
 </body>
