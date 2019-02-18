@@ -1,0 +1,18 @@
+ body {
+    font-family: 'Raleway', sans-serif;
+ }
+
+ .header {
+    letter-spacing: 2px;
+    font-weight: bold;
+ }
+
+ .sub-header {
+     font-weight: bold;
+ }
+
+ .my-btn {
+    margin: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+ }

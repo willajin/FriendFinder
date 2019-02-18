@@ -16,13 +16,16 @@
     <!-- Link Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./style.css" media="screen,projection" />
+
 </head>
 
 <body>
     <div class="container">
-        <h1>Survey</h1>
+        <h1 class="header">Survey</h1>
 
-        <h5 style="font-weight:bold">About You</h5>
+        <h5 class="sub-header">About You</h5>
         <div class="row">
             <form class="col s12">
                 <div class="row">
@@ -37,7 +40,7 @@
                 </div>
 
                 <!-- Survey -->
-                <h6 style="font-weight:bold">Answer the below questions truthfully.</h6>
+                <h6 class="sub-header">Answer the below questions truthfully.</h6>
                 <div class="input-field col s12">
                     <h6>1. Your mind is always buzzing with unexplored ideas and plans.</h6>
                     <select id="q1">
@@ -159,7 +162,7 @@
                     </select>
                 </div>
 
-                <button id="submitButton" class="btn waves-effect waves-light grey" type="submit"
+                <button id="submitButton" class="btn waves-effect waves-light grey my-btn" type="submit"
                     name="action">Submit</button>
             </form>
         </div>
@@ -169,7 +172,7 @@
     <footer class="page-footer white">
         <div class="footer-copyright grey lighten-2">
             <div class="container">
-                © 2019 Copyright
+                © 2019 Copyright | <a class="white-text" href="/api/friends">API Friends</a>
             </div>
         </div>
     </footer>
