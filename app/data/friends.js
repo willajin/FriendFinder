@@ -16,12 +16,12 @@ var friends = [
     },
     {
         name: "Andy Dwyer",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixrJycvbLgAhUTOH0KHQZBDb8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.dailybreak.com%2Fbreak%2Fandy-dwyers-greatest-moments-on-parks-and-recreation&psig=AOvVaw0VxW9CEjZ3D1P4mD8Ay5Ra&ust=1549933074003101",
+        photo: "https://upload.wikimedia.org/wikipedia/en/4/47/Andy_Dwyer.jpg",
         scores: [5, 1, 2, 1, 4, 2, 2, 1, 5, 5]
     },
     {
         name: "Tom Haverford",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwinke3BvbLgAhVaCTQIHa5LB_kQjRx6BAgBEAU&url=https%3A%2F%2Fwww.popsugar.com%2Fentertainment%2Fphoto-gallery%2F44990677%2Fimage%2F44990681%2FAziz-Ansari-Tom-Haverford&psig=AOvVaw31vGB4DxZVBlEirvEG9iAI&ust=1549933260893188",
+        photo: "https://costumewall.com/wp-content/uploads/2018/10/tom-haverford.jpg",
         scores: [5, 3, 4, 2, 1, 4, 3, 1, 4, 4]
     },
     {
